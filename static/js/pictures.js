@@ -3,7 +3,7 @@ function getPictures(){
         
         var picturesHTML = '<div class="flexslider"><ul class="slides">';
 
-        $.get("https://api.github.com/repos/NSF-Polar-Cyberinfrastructure/datavis-hackathon/issues/95", function(pic_data){
+        $.get("https://github.com/abburgess/ESIPFed.github.io/issues/1", function(pic_data){
         pic_data = pic_data.body.split("\r\n");
 
         var numPics = pic_data.length, pictures;
