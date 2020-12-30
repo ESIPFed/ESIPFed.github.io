@@ -203,7 +203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../docs_README/" class="md-nav__link">
+    <a href=".." class="md-nav__link">
       Home
     </a>
   </li>
@@ -463,53 +463,6 @@ __init__<span class="p">(</span><span class="bp">self</span><span class="p">,</s
 :type dataframe: pandas.DataFrame()
 :param data: Lake water level timeseries data
 :type data: pandas.DataFrame()</p>
-<details class="quote">
-          <summary>Source code in <code>lakepy/main.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">continent</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">original_id</span><span class="p">,</span> <span class="n">id_No</span><span class="p">,</span>
-             <span class="n">observation_period</span><span class="p">,</span> <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">misc_data</span><span class="p">,</span> <span class="n">dataframe</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-    <span class="sd">"""</span>
-<span class="sd">    Lake() constructor</span>
-<span class="sd">    :param name: Lake name</span>
-<span class="sd">    :type name: str</span>
-<span class="sd">    :param country: Country of lake residence</span>
-<span class="sd">    :type country: str</span>
-<span class="sd">    :param continent: Continent of lake residence</span>
-<span class="sd">    :type continent: str</span>
-<span class="sd">    :param source: Original database of lake data</span>
-<span class="sd">    :type source: str</span>
-<span class="sd">    :param original_id: Original identifier of lake</span>
-<span class="sd">    :type original_id: str</span>
-<span class="sd">    :param id_No: GLLD identification number</span>
-<span class="sd">    :type id_No: int</span>
-<span class="sd">    :param observation_period: Range of water level data</span>
-<span class="sd">    :type observation_period: str</span>
-<span class="sd">    :param latitude: Decimal degree latitude</span>
-<span class="sd">    :type latitude: str</span>
-<span class="sd">    :param longitude: Decimal degree longitude</span>
-<span class="sd">    :type longitude: str</span>
-<span class="sd">    :param misc_data: Database-specific metadata</span>
-<span class="sd">    :type misc_data: dict</span>
-<span class="sd">    :param dataframe: Lake metadata as Pandas DataFrame</span>
-<span class="sd">    :type dataframe: pandas.DataFrame()</span>
-<span class="sd">    :param data: Lake water level timeseries data</span>
-<span class="sd">    :type data: pandas.DataFrame()</span>
-<span class="sd">    """</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">country</span> <span class="o">=</span> <span class="n">country</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">continent</span> <span class="o">=</span> <span class="n">continent</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">original_id</span> <span class="o">=</span> <span class="n">original_id</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">id_No</span> <span class="o">=</span> <span class="n">id_No</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">observation_period</span> <span class="o">=</span> <span class="n">observation_period</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">latitude</span> <span class="o">=</span> <span class="n">latitude</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">longitude</span> <span class="o">=</span> <span class="n">longitude</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">misc_data</span> <span class="o">=</span> <span class="n">misc_data</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
-</code></pre>
-</div>
-</details>
 </div>
 </div>
 <div class="doc doc-object doc-method">
@@ -533,54 +486,6 @@ False)
 :param args: additonal <em>args to pass to matplotlib.pyplot axis
 :param kwargs: additonal </em>*kwargs to pass to matplotlib.pyplot axis
 :return: matplotlib axis instance if :param show is False</p>
-<details class="quote">
-          <summary>Source code in <code>lakepy/main.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">plot_mapview</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">out_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">provider</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_gdf</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">"""</span>
-<span class="sd">    Plot map-style overview of lake location using geopandas as contextily</span>
-<span class="sd">    :param show: Flag to determine whether matplotlib.pyplot.show() is called (True) or axis object is returned (</span>
-<span class="sd">    False)</span>
-<span class="sd">    :type show: bool</span>
-<span class="sd">    :param out_path: If supplied, figure will be saved to local filepath</span>
-<span class="sd">    :type out_path: str</span>
-<span class="sd">    :param zoom: contextily zoom level</span>
-<span class="sd">    :type zoom: int</span>
-<span class="sd">    :param provider: contextily provider passed as ctx.providers.{your provider here}. See contextily documentation.</span>
-<span class="sd">    :param args: additonal *args to pass to matplotlib.pyplot axis</span>
-<span class="sd">    :param kwargs: additonal **kwargs to pass to matplotlib.pyplot axis</span>
-<span class="sd">    :return: matplotlib axis instance if :param show is False</span>
-<span class="sd">    """</span>
-    <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
-    <span class="kn">import</span> <span class="nn">contextily</span> <span class="k">as</span> <span class="nn">ctx</span>
-    <span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">Point</span>
-    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-    <span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">geometry</span> <span class="o">=</span> <span class="p">[</span><span class="n">Point</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">longitude</span><span class="p">),</span>
-                                                             <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">latitude</span><span class="p">))])</span>
-    <span class="n">gdf</span><span class="o">.</span><span class="n">crs</span> <span class="o">=</span> <span class="s1">'EPSG:4326'</span>
-    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'red'</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">zoom</span> <span class="o">!=</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">provider</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">ctx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">source</span> <span class="o">=</span> <span class="n">provider</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="s1">'EPSG:4326'</span><span class="p">,</span> <span class="n">zoom</span> <span class="o">=</span> <span class="n">zoom</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">provider</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">ctx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">source</span> <span class="o">=</span> <span class="n">provider</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="s1">'EPSG:4326'</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">zoom</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">ctx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">source</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">OpenTopoMap</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="s1">'EPSG:4326'</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="n">zoom</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">ctx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">source</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">OpenTopoMap</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="s1">'EPSG:4326'</span><span class="p">)</span>
-
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_No</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">out_path</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">out_path</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">show</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="n">return_gdf</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">gdf</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">ax</span>
-</code></pre>
-</div>
-</details>
 </div>
 </div>
 <div class="doc doc-object doc-method">
@@ -602,84 +507,6 @@ plot_timeseries<span class="p">(</span><span class="bp">self</span><span class="
 :param args: args to pass to matplotlib or seaborn axis
 :param kwargs: kwargs to pass to matplotlib or seaborn axis
 :return: matplotlib axis object, or None</p>
-<details class="quote">
-          <summary>Source code in <code>lakepy/main.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">plot_timeseries</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'plotly'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                    <span class="n">date_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">date_end</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">"""</span>
-<span class="sd">    Plot timeseries of lake water level data</span>
-<span class="sd">    :param how: what plotting package to use: "plotly", "seaborn" or "matplotlib"</span>
-<span class="sd">    :type how: str</span>
-<span class="sd">    :param color: color to plot timeseries with, must conform with selected package syntax</span>
-<span class="sd">    :type color: str</span>
-<span class="sd">    :param show:</span>
-<span class="sd">    :type show: bool</span>
-<span class="sd">    :param args: args to pass to matplotlib or seaborn axis</span>
-<span class="sd">    :param kwargs: kwargs to pass to matplotlib or seaborn axis</span>
-<span class="sd">    :return: matplotlib axis object, or None</span>
-<span class="sd">    """</span>
-    <span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
-    <span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
-    <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
-    <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-    <span class="kn">import</span> <span class="nn">warnings</span>
-    <span class="kn">from</span> <span class="nn">lakepy.utils</span> <span class="kn">import</span> <span class="n">_validate</span>
-    <span class="k">if</span> <span class="n">date_start</span> <span class="ow">and</span> <span class="n">date_end</span><span class="p">:</span>
-        <span class="n">_validate</span><span class="p">(</span><span class="n">date_start</span><span class="p">)</span>
-        <span class="n">_validate</span><span class="p">(</span><span class="n">date_end</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">'date'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">date_start</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">'date'</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span>
-            <span class="n">date_end</span><span class="p">))]</span>
-    <span class="k">elif</span> <span class="n">date_start</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">date_end</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">pass</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'date_start and date_end params must both be None or strings with date format "%Y-%m-</span><span class="si">%d</span><span class="s1">"'</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">how</span> <span class="o">==</span> <span class="s1">'plotly'</span><span class="p">:</span>
-        <span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">"browser"</span>
-        <span class="n">plot</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">'date'</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">'water_level'</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_No</span><span class="p">)</span>
-                                                                         <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">color</span> <span class="o">!=</span> <span class="s2">"blue"</span><span class="p">:</span>
-            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">'Cannot specify color for plotly style plots, use how = "seaborn" or "matplotlib" to '</span>
-                          <span class="s1">'pass color'</span><span class="p">,</span> <span class="n">category</span> <span class="o">=</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
-        <span class="n">plot</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span>
-            <span class="n">rangeslider_visible</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="n">rangeselector</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
-                <span class="n">buttons</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([</span>
-                    <span class="nb">dict</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">"1m"</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="s2">"month"</span><span class="p">,</span> <span class="n">stepmode</span> <span class="o">=</span> <span class="s2">"backward"</span><span class="p">),</span>
-                    <span class="nb">dict</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">"6m"</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="s2">"month"</span><span class="p">,</span> <span class="n">stepmode</span> <span class="o">=</span> <span class="s2">"backward"</span><span class="p">),</span>
-                    <span class="nb">dict</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">"YTD"</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="s2">"year"</span><span class="p">,</span> <span class="n">stepmode</span> <span class="o">=</span> <span class="s2">"todate"</span><span class="p">),</span>
-                    <span class="nb">dict</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">"1Y"</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="s2">"year"</span><span class="p">,</span> <span class="n">stepmode</span> <span class="o">=</span> <span class="s2">"backward"</span><span class="p">),</span>
-                    <span class="nb">dict</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">"5Y"</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="s2">"year"</span><span class="p">,</span> <span class="n">stepmode</span> <span class="o">=</span> <span class="s2">"backward"</span><span class="p">),</span>
-                    <span class="nb">dict</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">"10Y"</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="s2">"year"</span><span class="p">,</span> <span class="n">stepmode</span> <span class="o">=</span> <span class="s2">"backward"</span><span class="p">),</span>
-                    <span class="nb">dict</span><span class="p">(</span><span class="n">step</span> <span class="o">=</span> <span class="s2">"all"</span><span class="p">),</span>
-                <span class="p">])),</span> <span class="nb">type</span> <span class="o">=</span> <span class="s2">"date"</span><span class="p">)</span>
-        <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">AutoLocator</span><span class="p">())</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_No</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Water Level [m]'</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Date'</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">how</span> <span class="o">==</span> <span class="s1">'seaborn'</span><span class="p">:</span>
-            <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">'whitegrid'</span><span class="p">)</span>
-            <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"date"</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"water_level"</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">how</span> <span class="o">==</span> <span class="s1">'matplotlib'</span><span class="p">:</span>
-            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">date</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">water_level</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span>
-                    <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-            <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span> <span class="n">ha</span> <span class="o">=</span> <span class="s1">'right'</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">SyntaxError</span><span class="p">(</span><span class="s2">"'how' parameter must be 'plotly', 'seaborn', or 'matplotlib'"</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">show</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">ax</span>
-</code></pre>
-</div>
-</details>
 </div>
 </div>
 </div>
@@ -703,74 +530,6 @@ as is any MySQL 5.7 syntax
 :param id_No: Global Lake Level Database identification number,
 :type id_No: str or int
 :return: Lake() object</p>
-<details class="quote">
-          <summary>Source code in <code>lakepy/main.py</code></summary>
-          <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">id_No</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">markdown</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">"""</span>
-<span class="sd">    Main search function for querying the Global Lake Level Database</span>
-<span class="sd">    :param name: Name of Lake or Reservoir. Be sure to use proper spelling. Wildcards (%) are allowed,</span>
-<span class="sd">    as is any MySQL 5.7 syntax</span>
-<span class="sd">    :type name: str</span>
-<span class="sd">    :param source: Lake water level source flag, accepted values are "usgs", "grealm", or "hydroweb"</span>
-<span class="sd">    :type source: str</span>
-<span class="sd">    :param id_No: Global Lake Level Database identification number,</span>
-<span class="sd">    :type id_No: str or int</span>
-<span class="sd">    :return: Lake() object</span>
-<span class="sd">    """</span>
-    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-    <span class="kn">import</span> <span class="nn">requests</span>
-    <span class="kn">import</span> <span class="nn">warnings</span>
-    <span class="k">if</span> <span class="n">id_No</span><span class="p">:</span>
-        <span class="n">id_No</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">id_No</span><span class="p">)</span>
-        <span class="n">url</span> <span class="o">=</span> <span class="s1">'https://4o8d0ft32f.execute-api.us-east-2.amazonaws.com/prod/glld/search/?idNo=</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-            <span class="n">id_No</span><span class="p">)</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="n">json_decode</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="n">json_decode</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'id_No'</span><span class="p">,</span> <span class="s1">'lake_name'</span><span class="p">,</span> <span class="s1">'source'</span><span class="p">,</span> <span class="s1">'metadata'</span><span class="p">])</span>
-
-    <span class="k">elif</span> <span class="ow">not</span> <span class="n">source</span><span class="p">:</span>
-        <span class="n">url</span> <span class="o">=</span> <span class="s1">'https://4o8d0ft32f.execute-api.us-east-2.amazonaws.com/prod/glld/search/?name=</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-            <span class="n">name</span><span class="p">)</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="n">json_decode</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="n">json_decode</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'id_No'</span><span class="p">,</span> <span class="s1">'lake_name'</span><span class="p">,</span> <span class="s1">'source'</span><span class="p">,</span> <span class="s1">'metadata'</span><span class="p">])</span>
-
-    <span class="k">elif</span> <span class="n">source</span><span class="p">:</span>
-        <span class="n">url</span> <span class="o">=</span> <span class="s1">'https://4o8d0ft32f.execute-api.us-east-2.amazonaws.com/prod/glld/'</span> \
-              <span class="s1">'search?name=</span><span class="si">{}</span><span class="s1">&amp;source=</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="n">json_decode</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="n">json_decode</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'id_No'</span><span class="p">,</span> <span class="s1">'lake_name'</span><span class="p">,</span> <span class="s1">'source'</span><span class="p">,</span> <span class="s1">'metadata'</span><span class="p">])</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"I don't know how you did this, but if you did, make a github issue!"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">'No results returned. Please adjust search parameters or see documentation'</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">'Search Result: </span><span class="se">\'</span><span class="si">{}</span><span class="se">\'</span><span class="s1"> has more than 1 Result. Showing the </span><span class="si">{}</span><span class="s1"> most relevant results.</span><span class="se">\n</span><span class="s1">'</span>
-                      <span class="s1">'Specify </span><span class="se">\'</span><span class="s1">id_No</span><span class="se">\'</span><span class="s1"> or narrow search name.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)),</span> <span class="n">category</span> <span class="o">=</span> <span class="ne">RuntimeWarning</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">markdown</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">([</span><span class="s1">'id_No'</span><span class="p">,</span> <span class="s1">'source'</span><span class="p">,</span> <span class="s1">'lake_name'</span><span class="p">])</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">([</span><span class="s1">'id_No'</span><span class="p">,</span> <span class="s1">'source'</span><span class="p">,</span> <span class="s1">'lake_name'</span><span class="p">]))</span>
-
-    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">meta_series</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'metadata'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">eval</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span>
-        <span class="n">df_unpacked</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span>
-                               <span class="n">right</span> <span class="o">=</span> <span class="n">meta_series</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'source'</span><span class="p">,</span> <span class="s1">'lake_name'</span><span class="p">],</span>
-                                                        <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">),</span>
-                               <span class="n">left_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                               <span class="n">right_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                               <span class="n">how</span> <span class="o">=</span> <span class="s1">'outer'</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'metadata'</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">markdown</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">df_unpacked</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">df_unpacked</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
-        <span class="n">lake_object</span> <span class="o">=</span> <span class="n">_lake_meta_constructor</span><span class="p">(</span><span class="n">df_unpacked</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">lake_object</span>
-</code></pre>
-</div>
-</details>
 </div>
 </div>
 </div>
@@ -794,7 +553,7 @@ as is any MySQL 5.7 syntax
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../docs_README/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
